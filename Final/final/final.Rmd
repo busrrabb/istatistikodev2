@@ -1,0 +1,141 @@
+---
+title: "İnsani Gelişme Kalitesinin Çıkarımsal Analizi"
+author: 
+  - Berkay Büyükşahin [18080064]
+bibliography: ../bibliography/biblio.bib
+csl: ../csl/apa-tr.csl
+header-includes:
+  - \usepackage{polyglossia}
+  - \setmainlanguage{turkish}
+  - \usepackage{booktabs}
+  - \usepackage{caption} 
+  - \captionsetup[table]{skip=10pt}
+output:
+  bookdown::pdf_document2:
+    fig_caption: yes
+    fig_height: 3
+    fig_width: 4
+    keep_tex: no
+    latex_engine: xelatex
+    number_sections: yes
+    toc: no
+geometry: margin=1in
+link-citations: yes
+urlcolor: blue
+fontsize: 12pt
+biblio-style: apalike
+abstract: |
+  Bu bölümde çalışmanızın özetini yazınız.
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+<!-- ======================================================================= -->
+<!-- ============================== NOTLAR ================================= -->
+<!-- ======================================================================= -->
+[^1]: Öğrenci Numarası, [Github Repo](https://github.com/KULLANICI_ADINIZ/REPO_ADINIZ)
+
+# Final Hakkında Önemli Bilgiler
+
+\colorbox{BurntOrange}{GITHUB REPO BAĞLANTINIZI BU DOSYANIN 37. SATIRINA YAZINIZ!}
+
+**Proje gönderimi, Github repo linki ile birlikte ekampus sistemine bir zip dosyası yüklenerek yapılacaktır. Sisteme zip dosyası yüklemezseniz ve Github repo linki vermezseniz ara sınav ve final sınavlarına girmemiş sayılırsınız.**
+
+**Proje klasörünüzü sıkıştırdıktan sonra (`OgrenciNumarasi.zip` dosyası) 9 Haziran 2023 23:59'a kadar *ekampus.ankara.edu.tr* adresine yüklemeniz gerekmektedir.**
+
+\colorbox{WildStrawberry}{Daha fazla bilgi için proje klasöründeki README.md dosyasını okuyunuz.}
+
+## Giriş
+İnsani gelişme, ekonomik büyüme yaratırken bireylerin sahip oldukları fırsat ve özgürlükleri de artırma sürecine verilen isimdir. İnsani gelişme, kapsayıcı sürdürülebilir büyüme, demokratik yönetişim, güvenilir iş ortamı, kapsamlı sağlık hizmetleri gibi insan hayatını doğrudan ilgilendiren ve etkileyen bir değerler bütünüdür. İnsani gelişme, insanların kendilerine ve sahip oldukları fırsatlara odaklanan bir yaklaşımdır. Bu veri setimizde insani gelişme kalitesini etkileyen faktörler ve gözlemler bulunmaktadır. Bu veri setinde bulunan değişkenler şunlardır:
+
+* **Ülkeler**
+* **Kayıp sağlık beklentisi:** _Yaşam beklentisi ile sağlıklı yaşam beklentisi arasındaki göreli farktır._
+* **Doktorlar:** _10.000 kişi başına ifade edilen hem pratisyen hem de uzman tıp doktorlarının sayısı._
+* **Hastane yatakları:** _10.000 kişi başına mevcut hastane yatağı sayısı._
+* **Öğrenci-eğitimli öğretmen oranı, ilkokul:** _İlköğretimde eğitimli öğretmen başına düşen ortalama öğrenci sayısı._
+* **Öğretmenlik yapmak üzere eğitilen ilkokul öğretmenleri:** _İlköğretim düzeyinde öğretmenlik yapmak için gereken eğitimini almış olan ilkokul öğretmenlerinin yüzdesi._
+* **İnternete erişimi olan okullar:** _Eğitim amaçlı internete erişimi olan okulların yüzdesi._
+* **Uluslararası Öğrenci Değerlendirme Programı (PISA) puanı:** _Öğrencilerin okuma, matematik ve fen bilgi ve becerilerinin test edilmesinden elde edilen puan._
+* **Güvencesiz istihdam Oranı:** _Çalışmaya ihtiyaç duyan kişiyi korumayan, çalışanın belli bir sendika kurumundan yararlanamayacağı bir istihdam edilme şeklinin oranı._
+* **Elektriğe erişimi olan kırsal nüfus:** _Elektriğe erişimi olan kırsal alanlarda yaşayan insanlar._
+* **Güvenli bir şekilde yönetilen içme suyu hizmetlerini kullanan nüfus:** _Erişilebilen, ihtiyaç duyulduğunda mevcut olan gelişmiş bir kaynaktan su içen nüfusun yüzdesi._
+* **Güvenli bir şekilde yönetilen sanitasyon hizmetlerini kullanan nüfus:** _Diğer hanelerle paylaşılmayan ve dışkının güvenli olarak bertaraf edildiği veya arıtıldığı gelişmiş tesisi kullanan nüfusun yüzdesi._
+
+## Çalışmanın Amacı
+İnsanların düzgün yaşaması, özellikle çocuk hakları için insani gelişme kalitesi ve endeski çok önemlidir. Bu araştırma sonucunda bir ülkenin gelişmiş, gelişmekte olan ya da gelişmemiş bir ülke olduğu; bunun yanı sıra ekonomisindeki etkinin yaşam niteliğini ne düzeyde etkilediğini çıkarımsal analizler sonucu göstereceğiz.
+
+## Literatür 
+Ülkeler, sahip oldukları coğrafi büyüklük, nüfus, kaynaklar, iklim ve siyasal-sosyal sisteme göre çeşitlilik göstermektedirler. Genellikle iktisadi gelişmeyi ya da ülkelerin gelişmişlik düzeyini ifade eden ölçüm gelir olmuştur. “Gelir insanların edinmek istedikleri önemli bir fırsattır fakat yaşamlarının toplamı da değildir”. Bu nedenle gelişme, gelir ve servetin artmasının ötesinde insana odaklı bir kavramdır. [@gunsoy2005insani] Gelişme, tüm insanların yaşam kalitesinde iyileşme sürecidir. İnsanların yaşam düzeylerinin iyileşmesi ile, ki bu da onların gelirlerinin artması ve yiyecek tüketimlerinin, sağlık hizmetlerinin, eğitimlerinin ve diğer koşullarının, ekonomik büyüme ile birlikte iyileşmesidir. Sosyal, kültürel, politik kurumlar, ekonomik sistemler ve enstitülerin yapılanması ile birlikte insanların kendine güveninin artması aynı şekilde insana verilen değerin artmasıdır. İnsanların seçeneklerinin genişlemesiyle birlikte özgürlüklerinin artması ve tüketilen mal ve hizmetlerin çeşitliliğinin artmasıdır. [@arguden2008yacsam]
+Günümüzde toplumların karşılaştığı en önemli sıkıntıların başında gelen yoksulluk, zamanla küresel bir boyut kazanmıştır. Yoksulluk kavramı kuşkusuz ki yalnızca gelir düzeyi ile ele alınamaz. Bununla beraber eğitim, sağlık ve toplumsal adalet gibi kıstaslar da yoksulluğu tanımlamaktadır. [@sagar1998human] Yoksulluğu ifade eden birçok yaklaşım mevcuttur. Dünya Bankası, IMF ve AB gibi uluslararası kuruluşlar yoksulluğa farklı tanımlar kazandırmıştır. Birleşmiş Milletler Kalkınma Programı'nın insani gelişme kavramını yenilemesiyle insani kalkınma önem kazanmıştır. Bu amaçla Birleşmiş Milletler Kalkınma Programı tarafından geliştirilmiş olan İnsani Gelişme Endeksi, tüm gelişmiş ve gelişmekte olan ülkelerin kalkınma düzeylerini her alanda inceleyen geniş perspektifli endeks olarak karşımıza çıkan önemli bir ölçüttür. [@ceylan2019insani] 
+Çok boyutlu bir kavram olan insani gelişmenin temel unsurlarını, Birleşmiş Milletler’in İnsani Gelişme Endeksi’ndeki 3 boyut oluşturur. Bu üç temel boyut: bireyin uzun, sağlıklı ve yaratıcı bir hayat yaşaması; bilgi ve eğitim alabilme imkanına sahip olması; insana yaraşır bir hayat için gerekli kaynaklara ulaşabilmesidir. [@papalia2007human] İnsani gelişme, en azından tüm insanlara bireysel veya kolektif olarak, kendi potansiyellerini geliştirebilmeleri ve bu yolla üretken ve yaratıcı bir hayat geçirebilmeleri için gerekli şartları sağlamayı merkezinde tutar. [@papalia2007human]
+
+## Veri 
+
+```{r, echo=FALSE}
+library(tidyverse)
+library(readxl)
+kalite <- read_xlsx("C:/Users/busra/Desktop/Final/data/insanigelismekalitesi.xlsx")
+```
+
+```{r, echo=FALSE}
+kalite %>% View()
+```
+
+```{r, echo=FALSE}
+değişkenler <- c("Kaybedilen Saglik Beklentisi (%)", "Hekim Sayısı (10.000 Kişi Başına)", "Hastane Yatak Sayısı (10.000 Kişi Başına)")
+
+istatistikler <- data.frame(
+  Değişken = değişkenler,
+  Ortalama = apply(kalite[, değişkenler], 2, mean, na.rm = TRUE),
+  Standart_Sapma = apply(kalite[, değişkenler], 2, sd, na.rm = TRUE),
+  Mod = apply(kalite[, değişkenler], 2, function(x) {
+    mod_değerleri <- table(x)
+    as.numeric(names(mod_değerleri)[mod_değerleri == max(mod_değerleri)])
+  }),
+  Medyan = apply(kalite[, değişkenler], 2, median, na.rm = TRUE)
+)
+
+```
+
+```{r, echo=FALSE}
+
+library(knitr)
+
+library(kableExtra)
+
+kable(istatistikler, "html", caption = "Özet İstatistikler") %>%
+  kable_styling()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Sonuç
+Bu bölümde çalışmanızın sonuçlarını özetleyiniz. Sonuçlarınızın başlangıçta belirlediğiniz araştırma sorusuna ne derece cevap verdiğini ve ileride bu çalışmanın nasıl geliştirilebileceğini tartışınız.
+
+**Kaynakça bölümü Rmarkdown tarafından otomatik olarak oluşturulmaktadır. Taslak dosyada Kaynakça kısmında herhangi bir değişikliğe gerek yoktur.** 
+
+**_Taslakta bu cümleden sonra yer alan hiçbir şey silinmemelidir._**
+
+\newpage
+# Kaynakça {#references}
+<div id="refs"></div>
+
